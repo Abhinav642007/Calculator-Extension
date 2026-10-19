@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Vintage Calculator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="calculator-chassis" id="calculator" role="region" aria-label="Retro 1980s Calculator">
+    <!-- Top Brand Plate & Vintage Photovoltaic Solar Cell -->
+    <header class="calculator-header">
+      <div class="brand-group">
+        <span class="brand-title">RETROTRONIC</span>
+        <span class="model-badge">LC-82</span>
+      </div>
+      <div class="solar-strip" aria-hidden="true" title="Solar Dual Power Sensor">
+        <div class="solar-cell"></div>
+        <div class="solar-cell"></div>
+        <div class="solar-cell"></div>
+        <div class="solar-cell"></div>
+      </div>
+    </header>
+
+    <!-- Recessed Vintage LCD Display -->
+    <section class="lcd-bezel" aria-label="Recessed LCD Screen Bezel">
+      <div class="lcd-screen" id="lcdScreen">
+        <!-- Vintage screen acrylic glare overlay -->
+        <div class="screen-glare" aria-hidden="true"></div>
+
+        <!-- LCD Status Badges -->
+        <div class="lcd-status-bar" aria-hidden="true">
+          <span class="lcd-badge" id="memoryIndicator">QUARTZ LC</span>
+          <span class="lcd-badge" id="opIndicator">READY</span>
+        </div>
+
+        <!-- Expression History Line -->
+        <div class="lcd-expression-line" id="expressionDisplay" aria-live="polite"></div>
+
+        <!-- Main Display Digits -->
+        <div class="lcd-main-row">
+          <!-- Unlit 7-Segment ghost numbers for authentic physical LCD look -->
+          <div class="lcd-ghost-digits" aria-hidden="true">888888888888</div>
+          <div class="lcd-value" id="mainDisplay" role="status" aria-live="polite">0</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mid Chassis Accent Label -->
+    <div class="chassis-divider">
+      <span class="chassis-accent-text">ELECTRONIC DESKTOP CALCULATOR</span>
+      <span class="power-type">DUAL POWER</span>
+    </div>
+
+    <!-- Tactile Keypad -->
+    <main class="keypad-grid" role="group" aria-label="Keypad buttons">
+      <!-- Row 1: AC, Delete, Sign toggle, Divide -->
+      <button type="button" class="key key-func key-ac" id="btn-clear" data-action="clear" aria-label="All Clear (Escape)">AC</button>
+      <button type="button" class="key key-func key-del" id="btn-backspace" data-action="backspace" aria-label="Delete / Backspace">DEL</button>
+      <button type="button" class="key key-func key-sign" id="btn-sign" data-action="sign" aria-label="Sign Toggle (±)">±</button>
+      <button type="button" class="key key-op key-div" id="btn-divide" data-action="operator" data-value="÷" aria-label="Divide (/)">÷</button>
+
+      <!-- Row 2: 7, 8, 9, Multiply -->
+      <button type="button" class="key key-num" id="btn-7" data-action="number" data-value="7" aria-label="7">7</button>
+      <button type="button" class="key key-num" id="btn-8" data-action="number" data-value="8" aria-label="8">8</button>
+      <button type="button" class="key key-num" id="btn-9" data-action="number" data-value="9" aria-label="9">9</button>
+      <button type="button" class="key key-op key-mul" id="btn-multiply" data-action="operator" data-value="×" aria-label="Multiply (*)">×</button>
+
+      <!-- Row 3: 4, 5, 6, Subtract -->
+      <button type="button" class="key key-num" id="btn-4" data-action="number" data-value="4" aria-label="4">4</button>
+      <button type="button" class="key key-num" id="btn-5" data-action="number" data-value="5" aria-label="5">5</button>
+      <button type="button" class="key key-num" id="btn-6" data-action="number" data-value="6" aria-label="6">6</button>
+      <button type="button" class="key key-op key-sub" id="btn-subtract" data-action="operator" data-value="−" aria-label="Subtract (-)">−</button>
+
+      <!-- Row 4: 1, 2, 3, Add -->
+      <button type="button" class="key key-num" id="btn-1" data-action="number" data-value="1" aria-label="1">1</button>
+      <button type="button" class="key key-num" id="btn-2" data-action="number" data-value="2" aria-label="2">2</button>
+      <button type="button" class="key key-num" id="btn-3" data-action="number" data-value="3" aria-label="3">3</button>
+      <button type="button" class="key key-op key-add" id="btn-add" data-action="operator" data-value="+" aria-label="Add (+)">+</button>
+
+      <!-- Row 5: %, 0, Decimal point, Equals -->
+      <button type="button" class="key key-num key-perc" id="btn-percent" data-action="percent" aria-label="Percent (%)">%</button>
+      <button type="button" class="key key-num" id="btn-0" data-action="number" data-value="0" aria-label="0">0</button>
+      <button type="button" class="key key-num" id="btn-dot" data-action="decimal" aria-label="Decimal point (.)">.</button>
+      <button type="button" class="key key-op key-equals" id="btn-equals" data-action="equals" aria-label="Equals (Enter)">=</button>
+    </main>
+
+    <!-- Retro Chassis Footer with Screws -->
+    <footer class="chassis-footer" aria-hidden="true">
+      <div class="chassis-screw screw-left" title="Chassis screw"></div>
+      <div class="chassis-spec">AUTO CONSTANT • FLOATING POINT</div>
+      <div class="chassis-screw screw-right" title="Chassis screw"></div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
